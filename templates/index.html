@@ -1,0 +1,138 @@
+{% extends "layout.html" %}
+{% block heading %}
+{% endblock %}
+{% block body %}
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Navegacion con tabs</title>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/style.css')}}">
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="{{url_for('static',filename='js/main.js')}}"></script>
+</head>
+<body>
+	<form action="{{url_for('curriculum')}}" method="post">
+	<div class="wrap">
+		<ul class="tabs">
+			<li><a href="#tab1"><span class="tab-text">Datos personales</span></a></li>
+			<li><a href="#tab2"><span class="tab-text">Habilidades</span></a></li>
+			<li><a href="#tab3"><span class="tab-text">Experiencia laboral</span></a></li>	
+			<li><a href="#tab4"><span class="tab-text">Estudios</span></a></li>		
+			<li><a href="#tab5"><span class="tab-text">Hobbies</span></a></li>
+			<li><a href="#tab6"><span class="tab-text">Contacto</span></a></li>
+			
+		</ul>
+		
+		<div class="secciones">
+			<article id="tab1">
+				<h1>Datos personales</h1>
+				<br>
+				<input type="text" id="name" name= "name" placeholder ="Nombre">
+				<br>
+				<input type="text" id="apellidos" name= "apellidos" placeholder ="Apellidos">
+				<br>
+				<input type="text" id="dni" name= "dni" placeholder ="Dni">
+				<br>
+				<input type="text" id="presentacion" name= "presentacion" placeholder ="Presentate">
+				<br>
+			</article>
+			<article id="tab2">
+				<h1>Habilidades:</h1>
+				<input type="text" id="skill1" name= "skill1" placeholder ="Ingresa tu habiilidad 1">
+				<br>
+				<input type="text" id="skill2" name= "skill2" placeholder ="Ingresa tu habiilidad 2">
+				<br>
+				<input type="text" id="skill3" name= "skill3" placeholder ="Ingresa tu habiilidad 3">
+				<br>
+				<input type="text" id="skill4" name= "skill4" placeholder ="Ingresa tu habiilidad 4">
+				<br>
+				<input type="text" id="skill5" name= "skill5" placeholder ="Ingresa tu habiilidad 5">
+				<br>
+				
+			</article>
+			<article id="tab3">
+				<h3>Experiencia laboral 1:</h3>
+				<input type="text" id="work2" name= "work2" placeholder ="Puesto de trabajo">
+				<br>
+				<h4>Tres labores que cumplia en ese puesto:</h4>
+				<input type="text" id="workexp1_1" name= "workexp1_1" placeholder ="Labor 1">
+				<br>
+				<input type="text" id="workexp1_2" name= "workexp1_2" placeholder ="Labor 2">
+				<br>
+				<input type="text" id="workexp1_3" name= "workexp1_3" placeholder ="Labor 3">
+				<br>
+				<br>
+				<h3>Experiencia laboral 2:</h3>
+				<input type="text" id="work2" name= "work2" placeholder ="Puesto de trabajo">
+				<br>
+				<h4>Tres labores que cumplia en ese puesto:</h4>
+				<input type="text" id="workexp2_1" name= "workexp2_1" placeholder ="Labor 1">
+				<br>
+				<input type="text" id="workexp2_2" name= "workexp2_2" placeholder ="Labor 2">
+				<br>
+				<input type="text" id="workexp2_3" name= "workexp2_3" placeholder ="Labor 3">
+				<br>
+				<br>
+				<h3>Experiencia laboral 3:</h3>
+				<input type="text" id="work3" name= "work3" placeholder ="Puesto de trabajo">
+				<br>
+				<h4>Tres labores que cumplia en ese puesto:</h4>
+				<input type="text" id="workexp3_1" name= "workexp3_1" placeholder ="Labor 1">
+				<br>
+				<input type="text" id="workexp3_2" name= "workexp3_2" placeholder ="Labor 2">
+				<br>
+				<input type="text" id="workexp3_3" name= "workexp3_3" placeholder ="Labor 3">
+				<br>
+				
+				
+			</article>
+			<article id="tab4">
+				<h1>Estudios:</h1>
+				<br>
+				<input type="text" id="sec" name= "sec" placeholder ="Donde hizo su Educacion secundaria">
+				<br>
+				<input type="text" id="sup" name= "sup" placeholder ="Donde hizo su Educacion superior">
+				<br>
+				<input type="text" id="mstr" name= "mstr" placeholder ="Donde hizo su Maetria">
+				<br>
+				<input type="text" id="doc" name= "doc" placeholder ="Donde hizo su Doctorado">
+				<br>
+			</article>
+			<article id="tab5">
+				<h1>Hobbies:</h1>
+				<br>	
+				<input type="text" id="hobbie1" name= "hobbie1" placeholder ="Hobbie">
+				<br>
+				<input type="text" id="hobbie2" name= "hobbie2" placeholder ="Hobbie">
+				<br>
+				<input type="text" id="hobbie3"name= "hobbie3" placeholder ="Hobbie">
+				<br>
+				<input type="text" id="hobbie4" name= "hobbie4" placeholder ="Hobbie">
+				<br>
+			</article>
+			<article id="tab6">
+			<h1>Contacto</h1>
+				<p>En caso no tengas alguna coloca "-"</p>
+				<br>
+				<input type="text" id="email" name= "email" placeholder ="E-mail">
+				<br>
+				<input type="text" id="nmr" name= "nmr" placeholder ="Numero de telefono">
+				<br>
+				<input type="text" id="cod_pos" name= "cod_pos" placeholder ="Codigo postal">
+				<br>
+				<input type="text" id="fb" name= "fb" placeholder ="Facebook">
+				<br>
+				<input type="text" id="ig" name= "ig" placeholder ="Instagram">
+				<br>
+				<input type="text" id="twt" name= "twt" placeholder ="Twitter">
+				<br>
+			</article>
+			<input type="submit" id="send-signup" name="signup" value="Registrar" />
+		</div>
+	</div>
+</form>
+</body>
+</html>
+{% endblock %}

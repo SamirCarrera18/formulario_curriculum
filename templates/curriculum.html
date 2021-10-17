@@ -1,0 +1,91 @@
+{% extends "layout.html" %}
+{% block heading %}
+{% endblock %}
+{% block body %}
+	<HTML>
+	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<style>
+		  .row> div {
+			  padding: 20px;
+			  background-color: #B5E4FC;
+			  border: 2px solid black;
+		  }
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-4">
+					<h2><center>{{name}} {{apellidos}} </center></h2>
+					<h5><center>{{titulo}}</center></h5>
+					<center><img src="https://opherton.com/imagenes/users_img/57/6/photo.jpg?r=1626959779" alt="Foto" style="width:300px"> </center>
+					<p>
+					<fieldset>
+					<legend><h3>Presentacion:</h3></legend>
+					<li>{{presentacion}}</li>
+					</fieldset>
+					</p>
+					<p>
+					<fieldset>
+						<legend><h3>Contacto:</h3></legend>
+						<li><img src="https://logos-marcas.com/wp-content/uploads/2020/05/WhatsApp-Logotipo.png" alt="logo whatsapp" style="width:35px" align=middle> {{nmr}}</li>
+						<hr/>
+						<li><img src="https://cdn.icon-icons.com/icons2/1826/PNG/512/4202011emailgmaillogomailsocialsocialmedia-115677_115624.png" alt="logo mail" style="width:25px" align=middle> {{email}}</li>
+						<hr/>
+						<li><img src="https://c0.klipartz.com/pngpicture/750/461/gratis-png-logo-de-la-aplicacion-de-instagram-logo-iconos-de-computadora-instagram-thumbnail.png" alt="logo instagram" style="width:25px" align=middle> {{ig}} </li>
+						<hr/>
+						<li><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/768px-Facebook_f_logo_%282019%29.svg.png" alt="logo facebook" style="width:20px" align=middle> {{fb}} </li>
+						<hr/>
+						<li><img src="https://cdn.icon-icons.com/icons2/2642/PNG/512/google_map_location_logo_icon_159350.png" alt="logo codigo postal" style="width:30px" align=middle>{{cod_pos}}</li>
+						<hr/>
+					</fieldset>
+					</p>
+					
+					
+				</div>
+				<div class="col-8">
+					<br><br>
+					<h3><i>Experiencia laboral:</i> </h3>
+					<hr/>
+					<h5>{{work1}} </h5>
+					<fieldset>
+						<li>{{workexp1_1}}</li>
+						<li>{{workexp1_2}}</li>
+						<li>{{workexp1_3}}</li>
+					</fieldset>
+					<br>
+					<h5>{{work2}}</h5>
+					<fieldset>
+						<li>{{workexp2_1}}</li>
+						<li>{{workexp2_2}}</li>
+						<li>{{workexp2_3}}</li>
+					</fieldset>
+					<br>
+					<h5>{{work3}}</h5>
+					<fieldset>
+						<li>{{workexp3_1}}</li>
+						<li>{{workexp3_2}}</li>
+						<li>{{workexp3_3}}</li>
+					</fieldset>
+					<hr/>
+					<h3><i>Formacion:</i> </h3>
+					<h5>Educación secundaria:	</h5><p>{{sec}}</p>
+					<h5>Educación superior:		</h5><p>{{sup}}</p>
+					<h5>Maestria:				</h5><p>{{mstr}}</p>
+					<h5>Doctorado:				</h5><p>{{doc}}</p>
+					<hr/>
+					<h3><i>Competencias: </i> </h3>
+					<fieldset>
+						<li>{{skill1}}</li>
+						<li>{{skill2}}</li>
+						<li>{{skill3}}</li>
+						<li>{{skill4}}</li>
+						<li>{{skill5}}</li>
+					</fieldset>
+					</div>
+					
+			</div>
+		</div>
+	</HTML>
+{% endblock %}
